@@ -1,0 +1,14 @@
+{
+ "organization":"$organization$",
+ "name":"$name$",
+ "version":"$version$",
+ "description":"$name$",
+ "site":"https://github.com/$github_account$/$name$",
+ "tags":[],
+ "docs":"https://github.com/$github_acocunt$/$name$",
+ "licenses": [],
+ "resolvers": [],
+ "dependencies": [],
+ "scalas": ["2.9.2","2.9.1","2.9.0"],
+ "sbt": false
+}

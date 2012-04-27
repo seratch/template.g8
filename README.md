@@ -1,4 +1,4 @@
-template.g8
-===========
+# Scala project template
 
-template.g8
+At least for me.
+
