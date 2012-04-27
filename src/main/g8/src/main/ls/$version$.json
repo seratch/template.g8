@@ -5,7 +5,7 @@
  "description":"$name$",
  "site":"https://github.com/$github_account$/$name$",
  "tags":[],
- "docs":"https://github.com/$github_acocunt$/$name$",
+ "docs":"https://github.com/$github_account$/$name$",
  "licenses": [],
  "resolvers": [],
  "dependencies": [],
