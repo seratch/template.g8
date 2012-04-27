@@ -3,6 +3,8 @@ import Keys._
 
 object $name$Build extends Build {
 
+  lazy val root = Project("root", file("."), settings = mainSettings)
+
   lazy val mainSettings: Seq[Project.Setting[_]] = Defaults.defaultSettings ++ Seq(
     sbtPlugin := false,
     organization := "$organization$",

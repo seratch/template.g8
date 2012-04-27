@@ -12,10 +12,14 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= (scalaVersion) { scalaVersion =>
+  val _scalaVersion = "_" + (scalaVersion match {
+    case "2.9.2" => "2.9.1"
+    case version => version
+  })
+  val slf4s = "slf4s" + _scalaVersion
   Seq(
-    "org.slf4j"               % "slf4j-api"             % "1.6.4"    % "compile",
-    "org.scalatest"           %% "scalatest"            % "1.7.1"    % "test",
-    "org.scala-tools.testing" %% "scalacheck"           % "1.9"      % "test"
+    "com.weiglewilczek.slf4s" % slf4s % "[1.0,)",
+    "org.scalatest" %% "scalatest" % "[1.7,)" % "test"
   )
 }
 
