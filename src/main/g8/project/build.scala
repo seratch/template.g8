@@ -1,7 +1,7 @@
 import sbt._
 import Keys._
 
-object $name$Build extends Build {
+object MyBuild extends Build {
 
   lazy val root = Project("root", file("."), settings = mainSettings)
 
