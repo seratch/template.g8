@@ -8,7 +8,8 @@ externalResolvers ~= (_.filter(_.name != "Scala-Tools Maven2 Repository"))
 
 resolvers ++= Seq(
   "typesafe" at "http://repo.typesafe.com/typesafe/releases",
-  "sbt-idea-repo" at "http://mpeltonen.github.com/maven/"
+  "sonatype" at "http://oss.sonatype.org/content/repositories/releases/",
+  "sbt-idea" at "http://mpeltonen.github.com/maven/"
 )
 
 libraryDependencies <++= (scalaVersion) { scalaVersion =>
