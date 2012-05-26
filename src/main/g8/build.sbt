@@ -1,4 +1,4 @@
-import testgen.TestgenKeys._
+import testgenerator.SbtKeys._
 
 scalaVersion := "2.9.2"
 
@@ -13,14 +13,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= (scalaVersion) { scalaVersion =>
-  val _scalaVersion = "_" + (scalaVersion match {
-    case "2.9.2" => "2.9.1"
-    case version => version
-  })
-  val slf4s = "slf4s" + _scalaVersion
   Seq(
-    "com.weiglewilczek.slf4s" % slf4s % "[1.0,)",
-    "org.scalatest" %% "scalatest" % "[1.7,)" % "test"
+    "org.scalatest" %% "scalatest" % "1.7.2" % "test"
   )
 }
 
@@ -32,16 +26,15 @@ seq(lsSettings :_*)
 
 seq(scalariformSettings: _*)
 
-// https://github.com/seratch/testgen-sbt
+// https://github.com/seratch/testgenerator
 
-seq(testgenSettings: _*)
+seq(testgeneratorSettings: _*)
 
-testgenEncoding in Compile := "UTF-8"
+testgeneratorEncoding in Compile := "UTF-8"
 
-testgenTestTemplate in Compile := "scalatest.FlatSpec"
+testgeneratorTestTemplate in Compile := "scalatest.FlatSpec"
 
-testgenScalaTestMatchers in Compile := "ShouldMatchers"
+testgeneratorScalaTestMatchers in Compile := "ShouldMatchers"
 
-testgenLineBreak in Compile := "LF"
-
+testgeneratorLineBreak in Compile := "LF"
 

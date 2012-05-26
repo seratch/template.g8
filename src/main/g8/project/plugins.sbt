@@ -7,7 +7,7 @@ resolvers ++= Seq(
   "less" at "http://repo.lessis.me"
 )
 
-addSbtPlugin("com.github.seratch" %% "testgen-sbt" % "1.0.0")
+addSbtPlugin("com.github.seratch" %% "testgenerator" % "1.1.0")
 
 addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.0.0")
 
