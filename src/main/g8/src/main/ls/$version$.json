@@ -6,9 +6,12 @@
  "site":"https://github.com/$github_account$/$name$",
  "tags":[],
  "docs":"https://github.com/$github_account$/$name$",
- "licenses": [],
+ "licenses": [{
+   "name": "Apache License, Version 2.0",
+   "url":"http://www.apache.org/licenses/LICENSE-2.0"
+  }],
  "resolvers": [],
  "dependencies": [],
- "scalas": ["2.9.2","2.9.1","2.9.0"],
+ "scalas": ["$scala_version$"],
  "sbt": false
 }
